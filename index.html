@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>NY Times</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  </head>
+  <body>
+
+    <div id="full_page" style="width:1300px; margin:0 auto;">
+
+
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root" class="dropdown"></div>
+
+  
+  <!-- <div class="dropdown">
+        <button onclick="myFunction()" class="sections-button">SECTIONS</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="#about">Homepage</a>
+            <a href="#base">World</a>
+            <a href="#blog">U.S.</a>
+            <a href="#contact">Politics</a>
+            <a href="#custom">N.Y.</a>
+            <a href="#support">Business</a>
+            <a href="#tools">Opinion</a>
+            <a>Tech</a>
+            <a>Science</a>
+            <a>Health</a>
+            <a>Sports</a>
+
+     
+
+        </div>
+      </div> -->
+
+    <div class="header" id="top_header">
+      <button type="button" class="gear-button"><img src="gear.png" width="30" height=30></button>
+      <button type="button" class="login-button"><a href="https://myaccount.nytimes.com/auth/login?EXIT_URI=https%3A%2F%2Fwww.nytimes.com%2F">LOG IN</a></button>
+      <button type="button" class="subscribe-button"><a href="https://www.nytimes.com/subscription/multiproduct/lp8XKUR.html?campaignId=4XUYF&module=Subscribe-Now&pgtype=Homepage&src=3004">SUBSCRIBE NOW</a></button>
+<!--       <button type="button" class="sections-button">SECTIONS</button>
+ -->      <button type="button" class="search-button">SEARCH</button>
+    </div>
+
+    <div class="header" id="mid_header">
+      <img src="NYT Language Bar_2.jpg" width=1300>
+      <center><img src="NYTimes Logo.jpg" alt="nyt_logo" id="main_logo" width="545" height="84"></center>
+      <center><ul class="secondary_nav">
+          <li class="snav" id="date">Date</li>
+          <li id="today-paper" class="snav"><a href="http://www.nytimes.com/pages/todayspaper/index.html?action=Click&module=HPMiniNav&region=TopBar&WT.nav=page&contentCollection=TodaysPaper&pgtype=Homepage" style="text-decoration: none;"><img src="today-paper.jpg" height=20 width=20>Today's Paper</a></li>
+          <li class="snav"><a href="https://www.nytimes.com/video?action=Click&module=HPMiniNav&region=TopBar&WT.nav=page&contentCollection=Video&pgtype=Homepage"Video style="text-decoration: none;"><img src="video.jpg" width=30 height=20>Video</a></li>
+          <li class="snav" id="output"><img src="cloud.jpg" width=30 height=20></li>
+          <li class="snav">Stocks</li>
+        </ul></center>
+    </div>
+
+
+    <div class="header" id="bottom_header">
+        <center><ul class="main_nav">
+          <li class="nitem"><a href="https://www.nytimes.com/section/world?action=click&pgtype=Homepage&region=TopBar&module=HPMiniNav&contentCollection=World&WT.nav=page"  style="text-decoration: none;">World</a></li>
+          <li class="nitem"><a href="https://www.nytimes.com/section/us?action=click&pgtype=Homepage&region=TopBar&module=HPMiniNav&contentCollection=U.S.&WT.nav=page"  style="text-decoration: none;">U.S.</a></li>
+          <li class="nitem"><a href="https://www.nytimes.com/section/politics?action=click&pgtype=Homepage&region=TopBar&module=HPMiniNav&contentCollection=Politics&WT.nav=page"  style="text-decoration: none;">Politics</a></li>
+          <li class="nitem"><a href="https://www.nytimes.com/section/nyregion?action=click&pgtype=Homepage&region=TopBar&module=HPMiniNav&contentCollection=N.Y.&WT.nav=page" style="text-decoration: none;">N.Y.</a></li>
+          <li class="nitem"><a href="https://www.nytimes.com/section/business?action=click&pgtype=Homepage&region=TopBar&module=HPMiniNav&contentCollection=Business&WT.nav=page" style="text-decoration: none;">Business</a></li>
+          <li class="nitem"><a href="https://www.nytimes.com/section/opinion?action=click&pgtype=Homepage&region=TopBar&module=HPMiniNav&contentCollection=Opinion&WT.nav=page" style="text-decoration: none;">Opinion</a></li>
+          <li class="nitem"><a href="https://www.nytimes.com/section/technology" style="text-decoration: none;">Tech</a></li>
+          <li class="nitem"><a href="https://www.nytimes.com/section/science?action=click&pgtype=Homepage&region=TopBar&module=HPMiniNav&contentCollection=Science&WT.nav=page" style="text-decoration: none;">Science</a></li>
+          <li class="nitem"><a href="https://www.nytimes.com/section/health" style="text-decoration: none;">Health</a></li>
+          <li class="nitem"><a href="https://www.nytimes.com/section/sports" style="text-decoration: none;">Sports</a></li>
+          <li class="nitem"><a href="https://www.nytimes.com/section/arts" style="text-decoration: none;">Arts</a></li>
+          <li class="nitem"><a href="https://www.nytimes.com/section/fashion" style="text-decoration: none;">Style</a></li>
+          <li class="nitem"><a href="https://www.nytimes.com/section/food?WT.nav=page&action=click&contentCollection=Food&module=HPMiniNav&pgtype=Homepage&region=TopBar" style="text-decoration: none;">Food</a></li>
+          <li class="nitem"><a href="https://www.nytimes.com/section/travel?action=click&pgtype=Homepage&region=TopBar&module=HPMiniNav&contentCollection=Travel&WT.nav=page" style="text-decoration: none;">Travel</a></li>
+          <li class="nitem"><a href="https://www.nytimes.com/section/magazine?action=click&pgtype=Homepage&region=TopBar&module=HPMiniNav&contentCollection=Magazine&WT.nav=page" style="text-decoration: none;">Magazine</a></li>
+          <li class="nitem"><a href="https://www.nytimes.com/section/t-magazine" style="text-decoration: none;">T Magazine</a></li>
+          <li class="nitem"><a href="https://www.nytimes.com/section/realestate?action=click&pgtype=Homepage&region=TopBar&module=HPMiniNav&contentCollection=Real%20Estate&WT.nav=page" style="text-decoration: none;">Real Estate</a></li>
+          <li class="nitem" style="text-decoration: none;">ALL</li>
+        </ul></center>
+    </div>
+
+    
+
+    <div class="page_body">
+      <div id="main_page_text">
+      <h2><a href="https://www.nytimes.com/2017/12/13/us/politics/tax-bill-republicans-deal.html?hp&action=click&pgtype=Homepage&clickSource=story-heading&module=a-lede-package-region&region=top-news&WT.nav=top-news">Senate and House G.O.P Reach a Deal on Tax Bill</a></h2>
+      <h4>By JIM TANKERSLY 12:21 PM ET</h4>
+      <ul>
+        <li>The Agreement on a consenus bill between House and Senate Repubicans keeps the party on track for final votes next week.</li>
+        <li>The Deal largely retains the structure of the Senate tax bill, but it is not clear if Republican senators will roundly endorse it.</li>
+      </ul>
+
+    </div>
+    <div id="main_page_image">
+      <img src="https://static01.nyt.com/images/2017/12/13/us/14DC-trumptax/14DC-trumptax-largeHorizontal375.jpg" alt="" id="page_image">
+    </div>
+
+    <div id="column_one">
+      <h2>Confessions of a Digital Nazi Hunter</h2>
+      <h4>By YAIR ROSENBERG</h4>
+      <p>In the wake of Trump's victory, I built a bot to expose bigots. Then Twitter suspended it and kept the bigots.</p>
+      <ul>
+        <li>Bruni: The End of Trump and the End of Days</li>
+        <li>Cohen: The Year Not to Defer Dreams</li>
+        <li>The 2018 Winter Olympics Are Already Tainted</li>
+        <li>The Year in Pictures 2017</li>
+      </ul>
+    </div>
+
+    <div id="column_two">
+      <h2>Life in the Soviet Union, One Family at a Time</h2>
+      <h4>By OLGA SHEVCHENKO and OKSANA SARKISOVA</h4>
+      <p>In familiy photo albums, a history of pleasures, hard times and frightened silences can be read.</p>
+      <ul>
+        <li>William Barber II: Trump's Terrible Choice for Judge<li>
+        <li>Cohen: The Year Not to Defer Dreams</li>
+        <li>China is Pushing Its Luck With the West</li>
+        <li>The Iran-Saudi Arabia Rivalry Has a Silver Lining</li>
+      </ul>
+    </div>
+
+  </div>
+    <div class="footer">
+      <center><ul id="footer_1">
+        <li class="fnav"><a href="https://www.nytimes.com/content/help/rights/copyright/copyright-notice.html" style="text-decoration: none;">2017 The New York Times Company</a></li>
+        <li class="fnav"><a href="http://www.nytimes.com/help/index.html?redir=myacc" style="text-decoration: none;">Contact Us</a></li>
+        <li class="fnav"><a href="https://www.nytco.com/careers/" style="text-decoration: none;">Work With Us</a></li>
+        <li class="fnav"><a href="http://nytmediakit.com/" style="text-decoration: none;">Advertise</a></li>
+        <li class="fnav"><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp" style="text-decoration: none;" style="text-decoration: none;">Your Ad Choices</a></li>
+        <li class="fnav"><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html" style="text-decoration: none;">Privacy</a></li>
+        <li class="fnav"><a href="https://www.nytimes.com/content/help/rights/terms/terms-of-service.html" style="text-decoration: none;">Terms of Service</a></li>
+        <li class="fnav" id="n_space"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html" style="text-decoration: none;">Terms of Sale</a></li>
+        <li class="fnav"><a href="http://spiderbites.nytimes.com/" style="text-decoration: none;">Site Map</a></li>
+        <li class="fnav"><a href="https://www.nytimes.com/content/help/front.html" style="text-decoration: none;">Help</a></li>
+        <li class="fnav"><a href="http://www.nytimes.com/help/index.html?redir=myacc" style="text-decoration: none;">Site Feedback</a></li>
+        <li class="fnav" id="end_f_nav"><a href="https://www.nytimes.com/subscription/multiproduct/lp8XKUR.html?campaignId=37WXW" style="text-decoration: none;">Subscriptions</a></li>
+      </ul></center>
+    </div>
+
+    </div>
+
+
+    <script>
+
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+</script>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
